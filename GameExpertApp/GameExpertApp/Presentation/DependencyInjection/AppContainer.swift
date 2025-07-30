@@ -6,6 +6,12 @@
 //
 // Corrected AppContainer.swift
 import Foundation
+import Core
+import GameDetailFeature
+import Networking
+import FavoriteGamesFeature
+import GameDetailFeature
+import GameFeature
 
 class AppContainer {
     static let shared = AppContainer()

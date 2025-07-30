@@ -6,6 +6,14 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		E6DFCEB92E3A6F4300947099 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = E6DFCEB82E3A6F4300947099 /* Core */; };
+		E6DFCEBB2E3A6F4600947099 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = E6DFCEBA2E3A6F4600947099 /* Networking */; };
+		E6DFCEBD2E3A6F4900947099 /* GameFeature in Frameworks */ = {isa = PBXBuildFile; productRef = E6DFCEBC2E3A6F4900947099 /* GameFeature */; };
+		E6DFCEBF2E3A6F4D00947099 /* GameDetailFeature in Frameworks */ = {isa = PBXBuildFile; productRef = E6DFCEBE2E3A6F4D00947099 /* GameDetailFeature */; };
+		E6DFCEC12E3A6F5100947099 /* FavoriteGamesFeature in Frameworks */ = {isa = PBXBuildFile; productRef = E6DFCEC02E3A6F5100947099 /* FavoriteGamesFeature */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		E68597D52E37D3FE001A4446 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +60,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6DFCEBB2E3A6F4600947099 /* Networking in Frameworks */,
+				E6DFCEBD2E3A6F4900947099 /* GameFeature in Frameworks */,
+				E6DFCEC12E3A6F5100947099 /* FavoriteGamesFeature in Frameworks */,
+				E6DFCEBF2E3A6F4D00947099 /* GameDetailFeature in Frameworks */,
+				E6DFCEB92E3A6F4300947099 /* Core in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +91,7 @@
 				E68597C92E37D3FC001A4446 /* GameExpertApp */,
 				E68597D72E37D3FE001A4446 /* GameExpertAppTests */,
 				E68597E12E37D3FE001A4446 /* GameExpertAppUITests */,
+				E6DFCE612E3A672700947099 /* Frameworks */,
 				E68597C82E37D3FC001A4446 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +104,13 @@
 				E68597DE2E37D3FE001A4446 /* GameExpertAppUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		E6DFCE612E3A672700947099 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +133,11 @@
 			);
 			name = GameExpertApp;
 			packageProductDependencies = (
+				E6DFCEB82E3A6F4300947099 /* Core */,
+				E6DFCEBA2E3A6F4600947099 /* Networking */,
+				E6DFCEBC2E3A6F4900947099 /* GameFeature */,
+				E6DFCEBE2E3A6F4D00947099 /* GameDetailFeature */,
+				E6DFCEC02E3A6F5100947099 /* FavoriteGamesFeature */,
 			);
 			productName = GameExpertApp;
 			productReference = E68597C72E37D3FC001A4446 /* GameExpertApp.app */;
@@ -195,6 +221,13 @@
 			);
 			mainGroup = E68597BE2E37D3FC001A4446;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				E6DFCEB32E3A6F1C00947099 /* XCLocalSwiftPackageReference "../Module/Core" */,
+				E6DFCEB42E3A6F2200947099 /* XCLocalSwiftPackageReference "../Module/Networking" */,
+				E6DFCEB52E3A6F2800947099 /* XCLocalSwiftPackageReference "../Module/GameFeature" */,
+				E6DFCEB62E3A6F2E00947099 /* XCLocalSwiftPackageReference "../Module/GameDetailFeature" */,
+				E6DFCEB72E3A6F3300947099 /* XCLocalSwiftPackageReference "../Module/FavoriteGamesFeature" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = E68597C82E37D3FC001A4446 /* Products */;
 			projectDirPath = "";
@@ -550,6 +583,57 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		E6DFCEB32E3A6F1C00947099 /* XCLocalSwiftPackageReference "../Module/Core" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../Module/Core;
+		};
+		E6DFCEB42E3A6F2200947099 /* XCLocalSwiftPackageReference "../Module/Networking" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../Module/Networking;
+		};
+		E6DFCEB52E3A6F2800947099 /* XCLocalSwiftPackageReference "../Module/GameFeature" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../Module/GameFeature;
+		};
+		E6DFCEB62E3A6F2E00947099 /* XCLocalSwiftPackageReference "../Module/GameDetailFeature" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../Module/GameDetailFeature;
+		};
+		E6DFCEB72E3A6F3300947099 /* XCLocalSwiftPackageReference "../Module/FavoriteGamesFeature" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../Module/FavoriteGamesFeature;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E6DFCEB82E3A6F4300947099 /* Core */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E6DFCEB32E3A6F1C00947099 /* XCLocalSwiftPackageReference "../Module/Core" */;
+			productName = Core;
+		};
+		E6DFCEBA2E3A6F4600947099 /* Networking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E6DFCEB42E3A6F2200947099 /* XCLocalSwiftPackageReference "../Module/Networking" */;
+			productName = Networking;
+		};
+		E6DFCEBC2E3A6F4900947099 /* GameFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E6DFCEB52E3A6F2800947099 /* XCLocalSwiftPackageReference "../Module/GameFeature" */;
+			productName = GameFeature;
+		};
+		E6DFCEBE2E3A6F4D00947099 /* GameDetailFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E6DFCEB62E3A6F2E00947099 /* XCLocalSwiftPackageReference "../Module/GameDetailFeature" */;
+			productName = GameDetailFeature;
+		};
+		E6DFCEC02E3A6F5100947099 /* FavoriteGamesFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E6DFCEB72E3A6F3300947099 /* XCLocalSwiftPackageReference "../Module/FavoriteGamesFeature" */;
+			productName = FavoriteGamesFeature;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E68597BF2E37D3FC001A4446 /* Project object */;
 }

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "self:"
+      name = "Core">
+      <FileSystemSynchronizedGroup
+         location = "group:Domain"
+         name = "Domain">
+      </FileSystemSynchronizedGroup>
+      <FileSystemSynchronizedGroup
+         location = "group:Data"
+         name = "Data">
+      </FileSystemSynchronizedGroup>
+      <FileRef
+         location = "group:Package.swift">
+      </FileRef>
+   </Group>
+</Workspace>

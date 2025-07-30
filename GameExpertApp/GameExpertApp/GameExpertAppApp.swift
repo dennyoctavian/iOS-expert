@@ -6,6 +6,11 @@
 //
 
 import SwiftUI
+import Core
+import GameDetailFeature
+import FavoriteGamesFeature
+import GameFeature
+import Networking
 
 @main
 struct GameExpertAppApp: App {
