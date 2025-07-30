@@ -12,7 +12,7 @@ public struct GameDetailView: View {
 
     @StateObject var viewModel: GameDetailViewModel
 
-    init(initialGame: Game, getGameDetailUseCase: GetGameDetailUseCase, manageFavoriteGameUseCase: ManageFavoriteGameUseCase) {
+    public init(initialGame: Game, getGameDetailUseCase: GetGameDetailUseCase, manageFavoriteGameUseCase: ManageFavoriteGameUseCase) {
         self.initialGame = initialGame
         _viewModel = StateObject(wrappedValue: GameDetailViewModel(
             gameSlug: initialGame.slug,

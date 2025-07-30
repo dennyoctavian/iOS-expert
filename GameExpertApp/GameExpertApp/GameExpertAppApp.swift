@@ -26,8 +26,10 @@ struct GameExpertAppApp: App {
                     TabView {
                         ContentView(
                             viewModel: GameListViewModel(
-                                getGamesUseCase: getGamesUseCase
-                            )
+                                getGamesUseCase: getGamesUseCase,
+                            ),
+                            getGameDetailUseCase: getGameDetailUseCase,
+                            manageFavoriteGameUseCase: manageFavoriteGameUseCase
                         )
                         .tabItem {
                             Label("Games", systemImage: "gamecontroller.fill")
@@ -41,6 +43,10 @@ struct GameExpertAppApp: App {
                         .tabItem {
                             Label("Favorites", systemImage: "heart.fill")
                         }
+                        AboutView()
+                            .tabItem {
+                                Label("About", systemImage: "person.fill")
+                            }
                     }
                 } else {
                     Text("Error: Application dependencies could not be resolved.")

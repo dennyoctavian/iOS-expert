@@ -6,6 +6,7 @@
 //
 import SwiftUI
 import Core
+import GameDetailFeature
 
 public struct FavoriteGamesView: View {
     @StateObject var viewModel: FavoriteGamesViewModel
@@ -28,10 +29,23 @@ public struct FavoriteGamesView: View {
                     Text("Error: \(errorMessage)")
                         .foregroundColor(.red)
                 } else if viewModel.favoriteGames.isEmpty {
-                    ContentUnavailableView {
-                        Label("No Favorite Games", systemImage: "heart.slash")
-                    } description: {
-                        Text("Add games to your favorites from the main list.")
+                    if #available(iOS 17.0, *) {
+                        ContentUnavailableView {
+                            Label("No Favorite Games", systemImage: "heart.slash")
+                        } description: {
+                            Text("Add games to your favorites from the main list.")
+                        }
+                    } else {
+                        VStack(spacing: 16) {
+                               Image(systemName: "heart.slash")
+                                   .font(.largeTitle)
+                               Text("No Favorite Games")
+                                   .font(.headline)
+                               Text("Add games to your favorites from the main list.")
+                                   .font(.subheadline)
+                                   .foregroundStyle(.secondary)
+                           }
+                           .padding()
                     }
                 }
                 else {

@@ -11,7 +11,18 @@ import GameDetailFeature
 
 public struct ContentView: View {
     @StateObject var viewModel: GameListViewModel
+    private let getGameDetailUseCase: GetGameDetailUseCase
+    private let manageFavoriteGameUseCase: ManageFavoriteGameUseCase
     
+    public init(viewModel: GameListViewModel,
+                getGameDetailUseCase: GetGameDetailUseCase,
+                manageFavoriteGameUseCase: ManageFavoriteGameUseCase
+    ) {
+        self._viewModel = StateObject(wrappedValue: viewModel)
+        self.getGameDetailUseCase = getGameDetailUseCase
+        self.manageFavoriteGameUseCase = manageFavoriteGameUseCase
+    }
+
     public var body: some View {
         NavigationView {
             List {
@@ -26,8 +37,8 @@ public struct ContentView: View {
                             destination:
                                 GameDetailView(
                                     initialGame: game,
-                                    getGameDetailUseCase: AppContainer.shared.resolve(GetGameDetailUseCase.self)!,
-                                    manageFavoriteGameUseCase: AppContainer.shared.resolve(ManageFavoriteGameUseCase.self)!
+                                    getGameDetailUseCase: self.getGameDetailUseCase,
+                                    manageFavoriteGameUseCase: self.manageFavoriteGameUseCase
                                 )
                         ) {
                             HStack {
@@ -77,9 +88,6 @@ public struct ContentView: View {
                 }
             }
             .navigationTitle("Popular Games")
-            .toolbar {
-//                NavigationLink("About", destination: AboutView())
-            }
         }
     }
 }
