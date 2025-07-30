@@ -14,7 +14,7 @@ let package = Package(
             targets: ["FavoriteGamesFeature"]),
     ],
     dependencies: [
-        .package(path: "../Core"),
+        .package(url: "https://github.com/dennyoctavian/Modularization-Core-Package.git", .upToNextMajor(from: "1.0.0")),
         .package(path: "../Networking"),
         .package(path: "../GameDetailFeature")
     ],
@@ -22,7 +22,7 @@ let package = Package(
         .target(
             name: "FavoriteGamesFeature",
             dependencies: [
-                .product(name: "Core", package: "Core"),
+                .product(name: "Core", package: "Modularization-Core-Package"),
                 .product(name: "Networking", package: "Networking"),
                 .product(name: "GameDetailFeature", package: "GameDetailFeature")
             ]

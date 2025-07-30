@@ -29,6 +29,5 @@ struct AboutView: View {
                 .font(.caption)
         }
         .padding()
-        .navigationTitle("Tentang Saya")
     }
 }

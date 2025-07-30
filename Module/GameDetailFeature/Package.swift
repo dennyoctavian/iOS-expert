@@ -14,14 +14,14 @@ let package = Package(
             targets: ["GameDetailFeature"]),
     ],
     dependencies: [
-        .package(path: "../Core"),
+         .package(url: "https://github.com/dennyoctavian/Modularization-Core-Package.git", .upToNextMajor(from: "1.0.0")),
         .package(path: "../Networking"),
     ],
     targets: [
         .target(
             name: "GameDetailFeature",
             dependencies: [
-                .product(name: "Core", package: "Core"),
+                .product(name: "Core", package: "Modularization-Core-Package"),
                 .product(name: "Networking", package: "Networking"),
             ]
         ),

@@ -1,0 +1,15 @@
+{
+  "originHash" : "cc0263f0cbcaafe53539e2c37daf76e147e7f4a1d8dff4aa795f16d34cce8bca",
+  "pins" : [
+    {
+      "identity" : "modularization-core-package",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/dennyoctavian/Modularization-Core-Package.git",
+      "state" : {
+        "revision" : "3cd26259d70d67a28c514471bb713d8ef8f65550",
+        "version" : "1.0.0"
+      }
+    }
+  ],
+  "version" : 3
+}
