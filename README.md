@@ -1,0 +1,1 @@
+[![Codemagic build status](https://api.codemagic.io/apps/688ac400a71e37c63a55087e/ios-game-expert-app/status_badge.svg)](https://codemagic.io/apps/688ac400a71e37c63a55087e/ios-game-expert-app/latest_build)
