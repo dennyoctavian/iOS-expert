@@ -5,7 +5,7 @@ workflows:
       xcode: latest
       cocoapods: default
       vars:
-        XCODE_PROJECT: "GameExpertApp.xcodeproj"
+        XCODE_PROJECT: "GameExpertApp/GameExpertApp.xcodeproj"
         XCODE_SCHEME: "GameExpertApp"
     scripts:
       - name: Run tests
